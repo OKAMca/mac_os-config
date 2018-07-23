@@ -25,8 +25,8 @@ defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 printf "System - Disable window resume system-wide\n"
 defaults write NSGlobalDomain NSQuitAlwaysKeepsWindows -bool false
 
-printf "System - Disable auto-correct\n"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+#printf "System - Disable auto-correct\n"
+#defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 printf "System - Disable smart quotes (not useful when writing code)\n"
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
@@ -62,23 +62,23 @@ defaults write NSGlobalDomain KeyRepeat -int 0
 printf "Keyboard - Disable press-and-hold for keys in favor of key repeat\n"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-printf "Trackpad - Map bottom right corner to right-click\n"
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
-defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
+#printf "Trackpad - Map bottom right corner to right-click\n"
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadCornerSecondaryClick -int 2
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.trackpadCornerClickBehavior -int 1
+#defaults -currentHost write NSGlobalDomain com.apple.trackpad.enableSecondaryClick -bool true
 
 printf "Trackpad - Enable tap to click for current user and the login screen\n"
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
+#defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+#defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
-printf "Trackpad - Use CONTROL (^) with scroll to zoom\n"
-defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
-defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
+#printf "Trackpad - Use CONTROL (^) with scroll to zoom\n"
+#defaults write com.apple.universalaccess closeViewScrollWheelToggle -bool true
+#defaults write com.apple.universalaccess HIDScrollZoomModifierMask -int 262144
 
-printf "Trackpad - Follow keyboard focus while zoomed in\n"
-defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
+#printf "Trackpad - Follow keyboard focus while zoomed in\n"
+#defaults write com.apple.universalaccess closeViewZoomFollowsFocus -bool true
 
 printf "Bluetooth - Increase sound quality for headphones/headsets\n"
 defaults write com.apple.BluetoothAudioAgent "Apple Bitpool Min (editable)" -int 40
@@ -143,11 +143,11 @@ defaults write com.apple.finder QLEnableTextSelection -bool true
 printf "iOS Simulator - Symlink the iOS Simulator application\n"
 sudo ln -sf "/Applications/Xcode.app/Contents/Applications/iPhone Simulator.app" "/Applications/iOS Simulator.app"
 
-printf "Safari - Set home page to 'about:blank' for faster loading\n"
-defaults write com.apple.Safari HomePage -string "about:blank"
+#printf "Safari - Set home page to 'about:blank' for faster loading\n"
+#defaults write com.apple.Safari HomePage -string "about:blank"
 
-printf "Safari - Hide bookmarks bar\n"
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+#printf "Safari - Hide bookmarks bar\n"
+#defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 printf "Safari - Use Contains instead of Starts With in search banners\n"
 defaults write com.apple.Safari FindOnPageMatchesWordStartsOnly -bool false
@@ -217,7 +217,7 @@ printf "App Store - Enable Debug Menu in the Mac App Store\n"
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
 printf "CCMenu - Add open source projects\n"
-defaults write net.sourceforge.cruisecontrol.CCMenu Projects '
+#defaults write net.sourceforge.cruisecontrol.CCMenu Projects '
 (
   {
     projectName = "bkuhlmann/alfred";
